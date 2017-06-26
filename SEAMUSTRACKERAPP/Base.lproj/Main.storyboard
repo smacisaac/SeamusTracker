@@ -77,13 +77,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dXA-Lg-BTK">
-                                <rect key="frame" x="16" y="97" width="343" height="536"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="dXA-Lg-BTK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFe-Nd-ZUd">
+                                <rect key="frame" x="317" y="72" width="42" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="zoom-in"/>
+                                <connections>
+                                    <action selector="onTappedRecenter:" destination="aWF-6m-vXR" eventType="touchUpInside" id="niH-d2-CzN"/>
+                                </connections>
+                            </button>
+                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cG-pq-lHl">
+                                <rect key="frame" x="132" y="506" width="111" height="109"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Button" image="success"/>
+                                <connections>
+                                    <action selector="onTappedCheck:" destination="aWF-6m-vXR" eventType="touchUpInside" id="GOj-TQ-Sum"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dXA-Lg-BTK" firstAttribute="leading" secondItem="MOL-Bc-u57" secondAttribute="leading" id="0V9-P6-32O"/>
+                            <constraint firstAttribute="trailing" secondItem="dXA-Lg-BTK" secondAttribute="trailing" id="VcX-Us-Wnd"/>
+                            <constraint firstItem="RvZ-S4-1ij" firstAttribute="top" secondItem="dXA-Lg-BTK" secondAttribute="bottom" id="cHq-DQ-BUI"/>
+                            <constraint firstItem="dXA-Lg-BTK" firstAttribute="top" secondItem="Jeo-z8-kGa" secondAttribute="bottom" id="rVZ-bu-a7J"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="dXA-Lg-BTK" id="n7x-2W-6e8"/>
                     </connections>
@@ -162,4 +186,8 @@
             <point key="canvasLocation" x="1359.375" y="168.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="success" width="512" height="512"/>
+        <image name="zoom-in" width="512" height="512"/>
+    </resources>
 </document>

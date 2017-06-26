@@ -9,13 +9,26 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    @IBAction func onTappedCheck(_ sender: Any) {
+        print("Tapped")
+    }
+    
+    @IBAction func onTappedRecenter(_ sender: Any) {
+        let region = MKCoordinateRegionMakeWithDistance(manager.location!.coordinate, 1000, 1000)
+        mapView.setRegion(region, animated: true)
+        print("Recentered")
+    }
+    
+    
     
     
     @IBOutlet weak var mapView: MKMapView!
     
     var manager = CLLocationManager()
     
+    var updateCount = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,27 +37,56 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         manager.delegate = self
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
+            
+            mapView.delegate = self
             print ("Ready to go")
             mapView.showsUserLocation = true
+            manager.startUpdatingLocation()
+            
+            if #available(iOS 10.0, *) {
+                Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
+                    //spawn a pokemon
+                    
+                    if let coord = self.manager.location?.coordinate {
+                        let anno = MKPointAnnotation()
+                        anno.coordinate = coord
+                        self.mapView.addAnnotation(anno)
+                    }
+                
+                })
+            } else {
+                // Fallback on earlier versions
+            }
+            
         }else{
             manager.requestWhenInUseAuthorization()
+            }
+        }//end of viewDidLoad
+    
+
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations: [CLLocation]){
+        if updateCount  < 3{
+            let region = MKCoordinateRegionMakeWithDistance(manager.location!.coordinate, 1000, 1000)
+            mapView.setRegion(region, animated: false)
+            updateCount += 1
+            print("we made it")
+            }else{
+                manager.stopUpdatingLocation()
+                }
         }
-       
-        
-    }
-    
-   
-    
-    
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
-}
+
+
+
+
+}//end of class mapViewController
+
+
+
+
+
+
+
