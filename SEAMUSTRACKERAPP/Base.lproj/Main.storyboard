@@ -128,8 +128,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-Tr-BjV">
-                                <rect key="frame" x="20" y="84" width="560" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-Tr-BjV">
+                                <rect key="frame" x="15" y="84" width="345" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
@@ -137,8 +137,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3pO-Tr-BjV" firstAttribute="leading" secondItem="mGp-j0-8vu" secondAttribute="leadingMargin" id="9ch-af-gXZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3pO-Tr-BjV" secondAttribute="trailing" constant="10" id="D8k-x5-DKg"/>
+                            <constraint firstItem="3pO-Tr-BjV" firstAttribute="leading" secondItem="mGp-j0-8vu" secondAttribute="leading" constant="15" id="b0l-2j-HDY"/>
                             <constraint firstItem="3pO-Tr-BjV" firstAttribute="trailing" secondItem="mGp-j0-8vu" secondAttribute="trailingMargin" id="cCk-Kt-pFo"/>
                             <constraint firstItem="3pO-Tr-BjV" firstAttribute="top" secondItem="eKr-eJ-C44" secondAttribute="bottom" constant="20" id="q97-kG-10R"/>
+                            <constraint firstAttribute="trailing" secondItem="3pO-Tr-BjV" secondAttribute="trailing" constant="15" id="tfK-Gf-GFP"/>
+                            <constraint firstItem="3pO-Tr-BjV" firstAttribute="leading" secondItem="mGp-j0-8vu" secondAttribute="leadingMargin" constant="10" id="zFJ-db-PL0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="f2a-w1-PKf">
@@ -159,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MmN-xB-6h2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2999" y="161"/>
+            <point key="canvasLocation" x="2998.5" y="160.5"/>
         </scene>
         <!--Azure Mobile Apps-->
         <scene sceneID="yNt-7v-plj">

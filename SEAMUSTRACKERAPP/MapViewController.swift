@@ -13,6 +13,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     @IBAction func onTappedCheck(_ sender: Any) {
         print("Tapped")
+        if let coord = self.manager.location?.coordinate {
+            let anno = MKPointAnnotation()
+            anno.coordinate = coord
+            self.mapView.addAnnotation(anno)
+        }
+        
     }
     
     @IBAction func onTappedRecenter(_ sender: Any) {
@@ -44,7 +50,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             manager.startUpdatingLocation()
             
             if #available(iOS 10.0, *) {
-                Timer.scheduledTimer(withTimeInterval: 5, repeats: true, block: { (timer) in
+                Timer.scheduledTimer(withTimeInterval: 30, repeats: true, block: { (timer) in
                     //spawn a pokemon
                     
                     if let coord = self.manager.location?.coordinate {
