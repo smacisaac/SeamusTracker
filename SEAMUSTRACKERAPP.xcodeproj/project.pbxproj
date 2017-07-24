@@ -18,6 +18,7 @@
 		A2E767C6194594DC00869113 /* ToDoItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2E767C5194594DC00869113 /* ToDoItemViewController.swift */; };
 		A31A89F71BF3FDFA00C7B656 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A31A89F61BF3FDFA00C7B656 /* Launch Screen.storyboard */; };
 		A3BBD77D1C05181600DD0DB0 /* MicrosoftAzureMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3BBD77C1C05181600DD0DB0 /* MicrosoftAzureMobile.framework */; };
+		BD3658611F258B66003C8B62 /* MapTagViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3658601F258B66003C8B62 /* MapTagViewController.swift */; };
 		BD589E9F1EFA1E4800CAEB3E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD589E9E1EFA1E4800CAEB3E /* MapViewController.swift */; };
 		BD589EA11EFA205500CAEB3E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD589EA01EFA205500CAEB3E /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		A2E767C5194594DC00869113 /* ToDoItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItemViewController.swift; sourceTree = "<group>"; };
 		A31A89F61BF3FDFA00C7B656 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A3BBD77C1C05181600DD0DB0 /* MicrosoftAzureMobile.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MicrosoftAzureMobile.framework; sourceTree = "<group>"; };
+		BD3658601F258B66003C8B62 /* MapTagViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapTagViewController.swift; sourceTree = "<group>"; };
 		BD589E9E1EFA1E4800CAEB3E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		BD589EA01EFA205500CAEB3E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -91,6 +93,7 @@
 				A2BD20951AC8A731007F7181 /* QSTodoDataModel.xcdatamodeld */,
 				A2D9CBC31943C2540017F096 /* AppDelegate.swift */,
 				A2D9CBCA1943C2540017F096 /* Main.storyboard */,
+				BD3658601F258B66003C8B62 /* MapTagViewController.swift */,
 				A2D9CBCD1943C2540017F096 /* Images.xcassets */,
 				A2D9CBC11943C2540017F096 /* Supporting Files */,
 				A2D9CBE31943C39D0017F096 /* ToDoTableViewController.swift */,
@@ -197,6 +200,7 @@
 				A2BD20971AC8A731007F7181 /* QSTodoDataModel.xcdatamodeld in Sources */,
 				A2D9CBE41943C39D0017F096 /* ToDoTableViewController.swift in Sources */,
 				BD589E9F1EFA1E4800CAEB3E /* MapViewController.swift in Sources */,
+				BD3658611F258B66003C8B62 /* MapTagViewController.swift in Sources */,
 				A2D9CBC41943C2540017F096 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -64,7 +64,7 @@ class ToDoTableViewController: UITableViewController, NSFetchedResultsController
         // Refresh data on load
         self.refreshControl?.beginRefreshing()
         self.onRefresh(self.refreshControl)
-    }
+    }//viewDiditLoad() end brackets
     
     func onRefresh(_ sender: UIRefreshControl!) {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
